@@ -1,60 +1,53 @@
-# PreSurgicalNotes-Eval
+# PreVisitPatientSummary-Eval
 
-Quality evaluation of pre-surgical medical notes summarization
+Quality evaluation of patient demographic summarization before primary care visit
 
 ## Project Overview
 
-This project evaluates the quality of synthetic pre-surgical medical discharge notes and assesses the performance of generative AI models in summarizing them for surgeons' pre-operative preparation.
+This project evaluates the quality of synthetic patient demographic data and tests the ability of generative AI models to create concise, structured summaries for physicians before a first-time patient visit.
 
 **Goal**  
-Identify common data quality issues (missing values, duplicates, invalid entries) and weaknesses in AI-generated summaries (hallucinations, omission of critical facts, factual inconsistency) to understand the reliability of using AI for concise patient overviews.
+- Identify data quality issues in demographic records (missing values, invalid dates, duplicates, inconsistencies)  
+- Assess how well open-source LLMs summarize key patient information for quick physician review  
+- Highlight common failures: omissions, hallucinations, formatting issues, bias in presentation
 
-The project is motivated by a real-world need in surgical practice: surgeons require fast, accurate summaries of a patient’s current medications, allergies, recent procedures, and key risks before an operation.
+The project is motivated by a real-world need in primary care: doctors need fast, accurate overviews of a new patient’s basic profile before the consultation begins.
 
 ## Skills & Tools Demonstrated
 
-- Manual & exploratory testing
-- Data quality validation (missing values, duplicates, range checks, consistency)
-- Python + pandas + sqlite3 for data analysis
-- Hugging Face Transformers (e.g., Falconsai/medical_summarization)
-- Text generation quality metrics (ROUGE, manual faithfulness evaluation)
-- GitHub + Google Colab for development and version control
-
-## Project Structure
-PreSurgicalNotes-Eval/
-├── data/
-├── notebooks/
-│   └── 01_data_quality_check.ipynb
-│   └── 02_summary_evaluation.ipynb
-├── reports/
-└── README.md
-
+- Manual & exploratory testing  
+- Data quality validation (missing values, duplicates, range/date checks, consistency)  
+- Python + pandas for data analysis  
+- Hugging Face Transformers (summarization models)  
+- Text generation evaluation (ROUGE, manual coverage & hallucination checks)  
+- GitHub + Google Colab for development & version control
 
 ## Phase 1: Data Quality Assessment
 
-Tested on 35 synthetic patient records.
+Tested on synthetic patient records.
 
-**Key Findings** (example – update with real results):
-- Missing values in "Allergies" field — 14% of cases
-- Invalid age values (negative or >120) — 2 cases
-- Duplicate patient IDs — 3 cases
-- Inconsistent procedure dates — 1 case
+**Key Findings** (to be updated with real results):
+- Dataset size: X rows, Y columns
+- Missing values: highest in [column names]
+- Invalid birthdates: X records (future dates or illogical)
+- Duplicate patient IDs: X cases
+- Gender inconsistencies: multiple spellings detected
+- Unrealistic income/expenses: negative or zero values
 
-**Conclusion**: Even synthetic datasets require rigorous validation before use in ML/GenAI pipelines.
+**Conclusion**: Even synthetic demographic data requires thorough validation before feeding into AI summarization pipelines.
 
 ## Next Steps (Planned)
 
-- Text summarization using open-source LLMs
-- Automated & manual quality evaluation of summaries (ROUGE score, faithfulness, coverage of key facts)
-- Testing for hallucinations, bias, and nondeterminism
-- Comparison of multiple models
+- Generate structured patient summaries using open-source LLMs  
+- Evaluate summaries for coverage of key fields: age, gender, marital status, location, income, insurance  
+- Test for hallucinations, omissions, and formatting consistency  
+- Compare zero-shot vs prompted summarization
 
 ## How to Run
 
-1. Open the notebook in Google Colab  
-2. Copy the notebook from this repository  
-3. Upload data from the `data/` folder  
-4. Run cells sequentially
+1. Open notebooks in Google Colab  
+2. Load data from the `data/` folder  
+3. Run cells sequentially
 
 ## Author
 
