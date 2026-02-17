@@ -22,11 +22,11 @@ The project is motivated by a real-world need in surgical practice: surgeons req
 
 ## Project Structure
 PreSurgicalNotes-Eval/
-├── data/                        # synthetic discharge notes (.csv)
+├── data/
 ├── notebooks/
-│   └── 01_data_quality_check.ipynb     # initial data validation
-│   └── 02_summary_evaluation.ipynb     # summarization & quality assessment
-├── reports/                     # evaluation tables & findings
+│   └── 01_data_quality_check.ipynb
+│   └── 02_summary_evaluation.ipynb
+├── reports/
 └── README.md
 
 
