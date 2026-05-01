@@ -45,9 +45,17 @@ Tested on 115 synthetic patient records.
 
 ## Phase 2: LLM Summarization & Evaluation
 
-**Model**: Llama 3.1 8B (via Ollama)  
-**Samples**: 10 synthetic patient profiles  
-**Approach**: Strict structured prompt + manual comparison with QA reference summaries
+**Models Evaluated**  
+Several models were tested during the summarization experiments:
+- Falconsai/medical_summarization (T5-based)
+- google/flan-t5-large  
+- Llama 3.1 8B (via Ollama) — selected as the primary model
+
+Llama 3.1 8B showed the best overall performance, demonstrating superior structure adherence, better coverage of available fields, and higher consistency compared to the earlier models. Falconsai and Flan-T5 frequently failed to follow the required output format.
+**Setup**  
+- **Primary Model**: Llama 3.1 8B (via Ollama)  
+- **Samples**: 10 synthetic patient profiles  
+- **Approach**: Strict structured prompting + manual comparison against QA reference summaries
 
 **Key Results**  
 - Average score: 3.8/5  
