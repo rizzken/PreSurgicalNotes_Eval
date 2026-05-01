@@ -70,6 +70,23 @@ See detailed evaluation: [02_summary_evaluation.ipynb](notebooks/02_summary_eval
 **Artifacts**  
 - `patients_samples1.csv` — file with 10 randomly selected samples from the full list
 
+## Phase 3: Automated LLM Evaluation with DeepEval and RAGAs
+
+**Objective**: Transition from manual evaluation to automated quality assessment of LLM-generated summaries using modern evaluation frameworks.
+
+**Tools & Frameworks**:
+- DeepEval
+- RAGAs
+- Ollama + Llama 3.1 8B (primary judge model)
+
+**Key Activities**:
+- Automated calculation of core LLM evaluation metrics (Faithfulness, Hallucination, Answer Relevance, Answer Correctness)
+- Comparison between manual scores and automated metrics
+- Analysis of correlation between different evaluation methods
+- Evaluation of judge model stability
+
+**Main Outcomes**:
+
 ## How to Run
 
 1. Open notebooks in Google Colab  
